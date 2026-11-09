@@ -52,6 +52,17 @@
     });
   }
 
+  // message to the owner (dialog)
+  const owner = $('[data-owner]');
+  if (owner && typeof owner.showModal === 'function') {
+    let opener = null;
+    $$('[data-owner-open]').forEach(b => b.addEventListener('click', () => { opener = b; owner.showModal(); }));
+    owner.addEventListener('click', e => { if (e.target === owner) owner.close(); });   // click on the backdrop
+    owner.addEventListener('close', () => { if (opener) opener.focus(); });
+  } else {
+    $$('[data-owner-open]').forEach(b => b.addEventListener('click', () => { location.href = 'mailto:bbagwang@gmail.com'; }));
+  }
+
   // opening status, in Seoul time
   const status = $('[data-status]');
   const pad = n => String(n).padStart(2, '0');
