@@ -196,6 +196,10 @@ h1, h2, h3 { text-wrap: balance; }
 .branch .info dt { font-size: 13px; }
 .branch__links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .branch__links .btn { min-height: 44px; padding: 0 20px; font-size: 14px; }
+@media (max-width: 520px) {
+  .branch { padding: 26px 22px; }
+  .branch__links .btn { flex: 1 1 auto; padding: 0 12px; }
+}
 
 .notes { margin: 0; padding: 0; list-style: none; }
 .notes li { position: relative; padding: 0 0 10px 16px; color: var(--muted); font-size: 15px; }
