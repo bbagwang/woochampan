@@ -15,7 +15,8 @@ Everything in the showreel is generated in code: no stock footage, no photos.
 node tools/bake.cjs                     # CG stills -> assets/img/cg/*.png (≈4 min each on SwiftShader)
 python3 tools/audio.py /tmp/reel.wav    # soundtrack
 node tools/render.cjs --frames --workers 4 --out /tmp/frames   # 2160 PNG frames
-tools/encode.sh /tmp/frames /tmp/reel.wav                      # -> assets/media/*
+node tools/render.cjs --frames --hero --fps 30 --out /tmp/hero  # text-free 12 s hero loop
+tools/encode.sh /tmp/frames /tmp/reel.wav /tmp/hero            # -> assets/media/*
 ```
 
 `node tools/render.cjs --stills 4.3,12.6 --out /tmp/stills` renders single frames for review.

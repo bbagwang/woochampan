@@ -27,6 +27,7 @@ else
   ffmpeg -hide_banner -loglevel warning -y -framerate 60 -i "$FR/f_%05d.png" \
     -vf "fps=30,scale=1280:720:flags=lanczos" -c:v libx264 -preset slow -crf 27 -profile:v high -pix_fmt yuv420p \
     -an -movflags +faststart "$OUT/showreel-hero.mp4"
+  ffmpeg -hide_banner -loglevel error -y -i "$FR/f_00000.png" -vf "scale=1280:720:flags=lanczos" -q:v 3 "$OUT/hero-poster.jpg"
 fi
 
 # poster, social card, chapter thumbnails

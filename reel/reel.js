@@ -14,7 +14,7 @@ const C = {
   ink: '#0b0908', char: '#141011', ember: '#ff6a2a', verm: '#c8281e', vermD: '#8f1a14',
   fat: '#f2e9dd', gold: '#c9a35c', goldL: '#e3c88f', paper: '#efe7d8', linen: '#0e1015',
 };
-const F = { serif: "'Noto Serif KR'", hahm: "'Hahmlet'", sans: "'Noto Sans KR'", mono: "'JetBrains Mono'", disp: "'Instrument Serif'" };
+const F = { serif: "'Noto Serif KR'", hahm: "'Hahmlet'", sans: "'Noto Sans KR'", mono: "'JetBrains Mono', 'Noto Sans KR'", disp: "'Instrument Serif'" };
 
 // ------------------------------------------------------------------ math & easing
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
@@ -58,8 +58,12 @@ const mk = (w, h) => { const c = document.createElement('canvas'); c.width = w; 
 const cv = mk(W, H); const ctx = cv.getContext('2d');
 const bgC = mk(W, H);
 const bg = makeGL(bgC, { preserveDrawingBuffer: true, alpha: true, premultipliedAlpha: true });
-const PM = bg.program(MARBLE_FS), PF = bg.program(FIRE_FS);
 const post = makeGL(out, { preserveDrawingBuffer: true, alpha: false });
+if (!bg || !post) {
+  out.insertAdjacentHTML('afterend', '<p style="padding:24px;font:15px sans-serif">이 브라우저는 WebGL2를 지원하지 않습니다. <a href="../assets/media/showreel.mp4" style="color:#e3c88f">영상으로 보기 →</a></p>');
+  throw new Error('WebGL2 unavailable');
+}
+const PM = bg.program(MARBLE_FS), PF = bg.program(FIRE_FS);
 const PP = post.program(POST_FS); const tex = post.texture();
 const mask = mk(W, H); const mx = mask.getContext('2d');
 
@@ -443,7 +447,7 @@ function sScore(t, u) {
     if (sw >= 0) {
       const [x, y, w, h] = rects[sw];
       ctx.strokeStyle = C.verm; ctx.lineWidth = 4; ctx.strokeRect(x - 9, y - 9, w + 18, h + 18);
-      text(['1', '1', '1', '1+', '1+', '1+', '1++', '1++', '1++'][sw], x + w / 2, y - 26, { fam: F.serif, size: sw === 8 ? 54 : 30, weight: 900, color: C.verm, align: 'center' });
+      text(['3', '2', '2', '1', '1', '1+', '1++', '1++', '1++'][sw], x + w / 2, y - 26, { fam: F.serif, size: sw === 8 ? 54 : 30, weight: 900, color: C.verm, align: 'center' });
     }
     const fin = E.outCubic(prog(u, 2.0, 2.2));
     text('1++ 중에서도 가장 높은 단계', 152, 930, { fam: F.sans, size: 30, weight: 500, color: '#1a1412', alpha: E.outCubic(prog(u, 1.6, 2.0)) });
@@ -613,8 +617,8 @@ const CARDS = [
   { ko: '우참판', en: 'SIGNATURE SET', sub: '안심 + 등심 150g · 1++ No.9', price: '55,000', bg: C.ink, fg: C.fat, ac: C.gold, layout: 'hero', img: 'plateD' },
   { ko: '특안심', en: 'PREMIUM TENDERLOIN', sub: '1++ No.9 · 130g', price: '59,000', bg: C.verm, fg: C.fat, ac: '#ffd9b8', layout: 'vertical', img: 'plate' },
   { ko: '런치정식', en: 'LUNCH SET', sub: '안심·등심 110g + 된장말이죽 or 볶음밥', price: '40,000', bg: C.paper, fg: '#1a1412', ac: C.verm, layout: 'grid', icon: 'tray' },
-  { ko: '한우국수전골', en: 'HANWOO NOODLE HOT POT', sub: '고기 다음, 꼭 시키는 한 냄비', price: '25,000', bg: C.char, fg: C.fat, ac: C.gold, layout: 'drop', icon: 'pot' },
-  { ko: '된장말이죽', en: 'DOENJANG PORRIDGE', sub: '리뷰마다 빠지지 않는 마무리', price: '', bg: C.gold, fg: '#1a1412', ac: C.vermD, layout: 'ring', icon: 'bowl' },
+  { ko: '한우국수전골', en: 'HANWOO NOODLE HOT POT', sub: '1++ 한우로 끓이는 한 냄비', price: '25,000', bg: C.char, fg: C.fat, ac: C.gold, layout: 'drop', icon: 'pot' },
+  { ko: '된장말이죽', en: 'DOENJANG PORRIDGE', sub: '구이 뒤의 구수한 마무리', price: '', bg: C.gold, fg: '#1a1412', ac: C.vermD, layout: 'ring', icon: 'bowl' },
   { ko: '후식 빙수', en: 'SHAVED ICE, ON THE HOUSE', sub: '식사 후 제공되는 시원한 한 그릇', price: '', bg: C.paper, fg: C.verm, ac: '#1a1412', layout: 'center', icon: 'ice' },
 ];
 function circleImg(im, cx, cy, r, sx, sy, sr, rot, a = 1) {
@@ -939,7 +943,7 @@ function renderHero(t) {
 // ------------------------------------------------------------------ boot
 const FONT_TEXT = '0123456789 .,:;·—–→×+/()’\'"%-_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz▍' +
   '고기에도품계가있다우참판서래본점마을한상점화낙관근내지방도플레이팅굽기의비밀자염갯벌바닷물을끓여얻는전통소금으로간합니숙련된직원이알맞게구워드립중에서가장높은단계특안심표고버섯새송아스파라거런치정식등심또는볶음밥된장말죽국수전골뒤꼭시키냄비리뷰마다빠지않마무리후식빙수사제공되시원그릇와블루옐로우밸클라드린골화이트포레파레스카든인부터까개룸차없미쉐린선정울초구이오빌딩층역반터미널프라빗이수꼭' +
-  '牛參判品階煮鹽';
+  '맛접신속든냄끓구수한뒤의'+'牛參判品階煮鹽';
 async function boot() {
   const specs = [
     `900 40px ${F.serif}`, `500 40px ${F.serif}`, `700 40px ${F.sans}`, `500 40px ${F.sans}`, `400 40px ${F.sans}`,

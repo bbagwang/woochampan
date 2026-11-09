@@ -47,8 +47,7 @@ void main(){
       vec4 r = uRects[i];
       if (fc.x >= r.x && fc.x <= r.x + r.z && fc.y >= r.y && fc.y <= r.y + r.w) { inside = 1.; dens = uRD[i]; }
     }
-    a *= inside;
-    if (a <= 0.) { o = vec4(0.); return; }
+    a *= inside;   // no early return: dFdx/dFdy below need uniform control flow
   }
   vec2 p = ((fc - .5*uRes)/uRes.y * uZoom + uOff) * 2.1;
   float s = uSeed;
