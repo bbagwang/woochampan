@@ -171,7 +171,7 @@ section { position: relative; }
 .grade__head { max-width: 900px; margin-bottom: clamp(40px, 6vw, 80px); }
 .grade__scale { position: relative; }
 .grade__canvas { width: 100%; height: clamp(300px, 42vw, 560px); cursor: crosshair; touch-action: pan-y; }
-.grade__labels { display: grid; grid-template-columns: repeat(9, 1fr); margin-top: 16px; text-align: center; font-size: 14px; }
+.grade__labels { display: grid; grid-template-columns: repeat(9, 1fr); column-gap: 10px; margin-top: 16px; text-align: center; font-size: 14px; }
 .grade__labels .is-top { color: var(--verm); font-weight: 700; }
 .grade__tiers { position: relative; height: 26px; margin-top: 14px; border-top: 1px solid rgba(26, 20, 18, .25); }
 .grade__tiers span { position: absolute; left: calc(var(--a) / 9 * 100%); width: calc(var(--b) / 9 * 100%); text-align: center; top: 8px; font-size: 12px; }

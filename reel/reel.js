@@ -933,7 +933,7 @@ function renderHero(t) {
   }
   vignette(.45, .45);
   tex.upload(cv);
-  PP.draw({ uRes: [W, H], uTime: t, uAberr: .0012, uBloom: .45, uGrain: .04, uVig: .35, uFlash: 0, uFlashCol: [1, 1, 1], uFade: 1 });
+  PP.draw({ uRes: [W, H], uTime: t, uAberr: .0012, uBloom: .45, uGrain: .012, uVig: .35, uFlash: 0, uFlashCol: [1, 1, 1], uFade: 1 });
 }
 
 // ------------------------------------------------------------------ boot
