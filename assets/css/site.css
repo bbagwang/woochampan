@@ -196,6 +196,12 @@ h1, h2, h3 { text-wrap: balance; }
 .branch .info dt { font-size: 13px; }
 .branch__links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .branch__links .btn { min-height: 44px; padding: 0 20px; font-size: 14px; }
+/* line the rows of side-by-side cards up with each other */
+@supports (grid-template-rows: subgrid) {
+  .branch { display: grid; grid-row: span 8; grid-template-rows: subgrid; row-gap: 0; }
+  .branch .info { display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 0; margin-bottom: 0; }
+  .branch__links { margin-top: 0; padding-top: 28px; align-self: end; }
+}
 @media (max-width: 520px) {
   .branch { padding: 26px 22px; }
   .branch__links .btn { flex: 1 1 auto; padding: 0 12px; }
