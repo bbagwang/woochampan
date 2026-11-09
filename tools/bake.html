@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><title>CG bake</title>
+<style>html,body{margin:0;background:#111}canvas{display:block}</style></head>
+<body>
+<script type="module">
+  import { makeGL } from '../assets/js/lib/gl.js';
+  import { FOOD_FS } from '../assets/js/lib/food.js';
+  // window.bake({mode, size:[w,h], extent, center, ss, cook, light}) -> dataURL (PNG, RGBA)
+  window.bake = async (o) => {
+    const c = document.createElement('canvas');
+    c.width = o.size[0]; c.height = o.size[1];
+    const g = makeGL(c, { preserveDrawingBuffer: true, alpha: true, premultipliedAlpha: true });
+    const prog = g.program(FOOD_FS);
+    const t0 = performance.now();
+    // render in horizontal bands so a single draw doesn't trip the GPU watchdog
+    const gl = g.gl; gl.enable(gl.SCISSOR_TEST);
+    const band = o.band || 128;
+    for (let y = 0; y < c.height; y += band) {
+      gl.scissor(0, y, c.width, Math.min(band, c.height - y));
+      prog.draw({ uRes: [c.width, c.height], uMode: o.mode, uCook: o.cook || 0, uExtent: o.extent, uCenter: o.center || [0, 0], uSS: o.ss || 1, uLight: o.light || [-0.55, 0.55, 0.62], uTilt: o.tilt || 0 });
+      gl.finish();
+    }
+    const url = c.toDataURL('image/png');
+    return { url, ms: performance.now() - t0 };
+  };
+  window.bakeReady = true;
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>우참판 Showreel ’26 — live engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;900&display=block">
+<style>
+  html, body { margin: 0; background: #000; color: #f2e9dd; font: 13px 'JetBrains Mono', monospace; overflow: hidden; }
+  #stage { display: block; width: 1920px; height: 1080px; }
+  body:not(.render) #stage { width: 100vw; height: 56.25vw; max-height: calc(100vh - 56px); max-width: calc((100vh - 56px) * 16 / 9); margin: 0 auto; }
+  #ui { position: fixed; left: 0; right: 0; bottom: 0; height: 56px; display: flex; align-items: center; gap: 16px; padding: 0 20px; background: #0b0908; }
+  #ui[hidden] { display: none; }
+  #ui button { background: none; border: 1px solid #f2e9dd55; color: inherit; width: 40px; height: 32px; cursor: pointer; }
+  #ui input { flex: 1; accent-color: #c8281e; }
+</style>
+</head>
+<body>
+<canvas id="stage"></canvas>
+<div id="ui" hidden><button id="play" aria-label="재생/일시정지">❚❚</button><button id="snd" aria-label="소리 켜기" style="width:auto;padding:0 10px">♪ OFF</button><input id="scrub" type="range" min="0" value="0" aria-label="타임라인"><span id="tc">0.00s</span></div>
+<script>if (new URLSearchParams(location.search).has('render')) document.body.classList.add('render');</script>
+<script type="module" src="reel.js"></script>
+</body>
+</html>
