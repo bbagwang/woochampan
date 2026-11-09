@@ -173,6 +173,17 @@ h1, h2, h3 { text-wrap: balance; }
 .hours th { width: 64px; font-weight: 500; white-space: nowrap; }
 .hours td:last-child { padding-right: 0; color: var(--muted); font-size: 14px; }
 .hours tr.is-today th, .hours tr.is-today td:nth-child(2) { color: var(--accent); }
+/* reservation */
+.reserve__title { margin-top: 40px; }
+.reserve { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.reserve__item { position: relative; display: flex; flex-direction: column; gap: 2px; padding: 18px 44px 18px 20px; border: 1px solid rgba(26, 22, 19, .22); color: var(--ink); text-decoration: none; transition: border-color .25s, background .25s; }
+.reserve__item::after { content: '↗'; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); color: var(--accent); font-size: 16px; }
+.reserve__item:hover { border-color: var(--ink); background: var(--paper); }
+.reserve__name { font: 600 17px/1.4 var(--serif); }
+.reserve__desc { color: var(--muted); font-size: 13.5px; }
+.reserve + .visit__actions { margin-top: 12px; }
+@media (max-width: 520px) { .reserve { grid-template-columns: 1fr; } }
+
 /* branches */
 .branches { padding: clamp(104px, 13vw, 176px) 0; background: var(--bg-2); }
 .branch-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(16px, 2vw, 24px); margin: 0; padding: 0; list-style: none; }

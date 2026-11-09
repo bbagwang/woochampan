@@ -36,7 +36,7 @@
   const navIO = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) links.forEach(a => a.classList.toggle('is-active', a.hash === '#' + e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  ['about', 'menu', 'space', 'visit'].forEach(id => { const s = document.getElementById(id); if (s) navIO.observe(s); });
+  ['about', 'menu', 'space', 'visit', 'branches'].forEach(id => { const s = document.getElementById(id); if (s) navIO.observe(s); });
 
   // gentle reveal
   const items = $$('[data-reveal]');
