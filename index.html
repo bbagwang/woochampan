@@ -2,28 +2,29 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>우참판 서래본점 — 서래마을 1++ No.9 한우</title>
 <meta name="description" content="미쉐린 가이드 서울 2017·2018·2019 선정. 서래마을 1++ No.9 한우 전문점 우참판. 자염으로 간하고 숙련된 직원이 알맞게 구워드립니다. 서울 서초구 서래로 23 이오빌딩 3층.">
-<meta name="theme-color" content="#0b0908">
+<meta name="theme-color" content="#f7f3ed">
 <link rel="canonical" href="https://woochampan.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="우참판">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="우참판 서래본점 — 고기에도 품계가 있다">
-<meta property="og:description" content="서래마을 1++ No.9 한우 · 미쉐린 가이드 서울 2017·2018·2019 선정">
-<meta property="og:image" content="https://woochampan.com/assets/media/og.jpg">
+<meta property="og:title" content="우참판 서래본점 — 서래마을 1++ No.9 한우">
+<meta property="og:description" content="미쉐린 가이드 서울 2017·2018·2019 선정 · 자염으로 간하고 테이블에서 구워드립니다">
+<meta property="og:url" content="https://woochampan.com/">
+<meta property="og:image" content="https://woochampan.com/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://woochampan.com/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/img/seal.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;700&display=swap">
+<link rel="preload" as="image" href="assets/img/photo/platter-1400.webp" imagesrcset="assets/img/photo/platter-1400.webp 1400w, assets/img/photo/platter-2400.webp 2400w" imagesizes="(max-width: 900px) 100vw, 58vw" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/site.css">
-<noscript><style>.loader{display:none}</style></noscript>
+<script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,10 +32,10 @@
   "name": "우참판 서래본점",
   "alternateName": "Woochampan",
   "url": "https://woochampan.com/",
+  "logo": "https://woochampan.com/assets/img/logo.png",
+  "image": "https://woochampan.com/assets/img/og.jpg",
   "telephone": "+82-10-7200-5940",
-  "servesCuisine": ["한우", "Korean BBQ", "소고기구이"],
-  "priceRange": "₩₩₩",
-  "image": "https://woochampan.com/assets/media/og.jpg",
+  "servesCuisine": ["한우", "소고기구이", "Korean BBQ"],
   "address": { "@type": "PostalAddress", "streetAddress": "서래로 23 이오빌딩 3층", "addressLocality": "서초구", "addressRegion": "서울특별시", "addressCountry": "KR" },
   "geo": { "@type": "GeoCoordinates", "latitude": 37.4971055, "longitude": 126.9980985 },
   "openingHoursSpecification": [
@@ -50,358 +51,240 @@
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
 
-<!-- preloader: the seal stamps, then lifts -->
-<div class="loader" aria-hidden="true">
-  <div class="loader__seal"><span>牛</span></div>
-  <div class="loader__bar"><i></i></div>
-</div>
-
-<header class="nav" data-nav>
-  <a class="nav__brand" href="#top" aria-label="우참판 처음으로">
-    <span class="seal seal--sm" aria-hidden="true">牛</span>
-    <span class="nav__word">우참판</span>
-    <span class="nav__sub mono">SEORAE</span>
+<header class="hd" data-header>
+  <a class="hd__logo" href="#top" aria-label="우참판 처음으로">
+    <img src="assets/img/logo.png" alt="우참판" width="559" height="520">
   </a>
-  <nav class="nav__links" aria-label="주요 메뉴">
-    <a href="#story">이야기</a>
-    <a href="#grade">1++ No.9</a>
-    <a href="#grill">굽기</a>
+  <nav class="hd__nav" id="site-nav" aria-label="주요 메뉴">
+    <a href="#about">소개</a>
     <a href="#menu">메뉴</a>
-    <a href="#rooms">공간</a>
+    <a href="#space">공간</a>
     <a href="#visit">오시는 길</a>
-    <a href="#reel">쇼릴</a>
   </nav>
-  <div class="nav__cta">
-    <span class="nav__status mono" data-open-status>—</span>
-    <a class="btn btn--seal" href="https://app.catchtable.co.kr/ct/shop/woochampan" target="_blank" rel="noopener">예약하기</a>
-    <button class="nav__burger" aria-label="메뉴 열기" aria-expanded="false" data-burger><i></i><i></i></button>
+  <div class="hd__end">
+    <a class="btn btn--sm" href="https://app.catchtable.co.kr/ct/shop/woochampan" target="_blank" rel="noopener">예약하기</a>
+    <button class="hd__toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="메뉴 열기" data-menu-toggle><span></span><span></span></button>
   </div>
 </header>
 
 <main id="main">
 
-<!-- HERO ------------------------------------------------------------- -->
-<section class="hero" id="top">
-  <video class="hero__video" data-hero-video autoplay muted loop playsinline preload="auto" poster="assets/media/hero-poster.jpg" aria-hidden="true">
-    <source src="assets/media/showreel-hero.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference)">
-  </video>
-  <div class="hero__shade"></div>
-  <div class="hud" aria-hidden="true">
-    <i class="hud__c hud__c--tl"></i><i class="hud__c hud__c--tr"></i><i class="hud__c hud__c--bl"></i><i class="hud__c hud__c--br"></i>
-    <div class="hud__tl mono"><b>WOOCHAMPAN</b><span>SHOWREEL ’26 — 우참판 서래본점</span></div>
-    <div class="hud__tr mono"><b><i class="rec"></i><span data-tc>TC 00:00:00:00</span></b><span data-chapter>01 / 03 — THE PLATE</span></div>
-    <div class="hud__br mono"><b>37.4971° N &nbsp; 126.9981° E</b><span>SEORAE-RO 23 · SEOCHO-GU · SEOUL</span></div>
-    <div class="hud__bar"><i data-tc-bar></i></div>
-  </div>
-  <div class="hero__inner">
-    <p class="kicker mono" data-reveal>미쉐린 가이드 서울 2017 · 2018 · 2019 선정</p>
-    <h1 class="hero__title" aria-label="고기에도 품계가 있다">
-      <span class="hero__line hero__line--light" data-split>고기에도</span>
-      <span class="hero__line" data-weight><span class="ruby" aria-hidden="true"><i><span>品</span></i><i><span>階</span></i></span>품계가 있다</span>
-    </h1>
-    <p class="hero__lede" data-reveal>서래마을의 1++ No.9 한우. 자염으로 간하고,<br class="br-md"> 숙련된 직원이 가장 알맞게 구워 드립니다.</p>
-    <div class="hero__ctas" data-reveal>
-      <a class="btn btn--seal btn--lg" href="https://app.catchtable.co.kr/ct/shop/woochampan" target="_blank" rel="noopener">캐치테이블 예약</a>
-      <button class="btn btn--ghost btn--lg" data-play-reel="0"><span class="play" aria-hidden="true"></span>쇼릴 보기 <small class="mono">0:36 · SOUND ON</small></button>
+  <section class="hero" id="top">
+    <div class="hero__text">
+      <img class="hero__logo" src="assets/img/logo.png" alt="우참판" width="559" height="520" fetchpriority="high">
+      <h1 class="hero__title">고기에도 품계가 있다</h1>
+      <p class="hero__lede">서래마을의 1++ No.9 한우.<br>자염으로 간하고, 숙련된 직원이 테이블에서 알맞게 구워 드립니다.</p>
+      <div class="hero__actions">
+        <a class="btn" href="https://app.catchtable.co.kr/ct/shop/woochampan" target="_blank" rel="noopener">예약하기</a>
+        <a class="btn btn--ghost" href="tel:01072005940">010-7200-5940</a>
+      </div>
+      <p class="hero__note">미쉐린 가이드 서울 2017 · 2018 · 2019</p>
     </div>
-  </div>
-  <a class="hero__scroll mono" href="#stats">SCROLL<i></i></a>
-  <button class="hero__motion mono" data-motion-toggle aria-pressed="false"><i aria-hidden="true"></i><span>모션 정지</span></button>
-</section>
+    <div class="hero__media">
+      <img src="assets/img/photo/platter-1400.webp"
+           srcset="assets/img/photo/platter-1400.webp 1400w, assets/img/photo/platter-2400.webp 2400w"
+           sizes="(max-width: 900px) 100vw, 58vw" width="2400" height="1601" fetchpriority="high"
+           alt="물결무늬 검은 석판 위에 올린 한우와 별 모양 칼집을 낸 표고버섯, 관자">
+    </div>
+  </section>
 
-<!-- MARQUEE ---------------------------------------------------------- -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <span>1++ No.9 한우</span><b>·</b><span>자염 煮鹽</span><b>·</b><span>MICHELIN GUIDE SEOUL 2017 · 2018 · 2019</span><b>·</b><span>서래마을</span><b>·</b><span>프라이빗 룸 13</span><b>·</b><span>GRILLED TABLESIDE</span><b>·</b>
-    <span>1++ No.9 한우</span><b>·</b><span>자염 煮鹽</span><b>·</b><span>MICHELIN GUIDE SEOUL 2017 · 2018 · 2019</span><b>·</b><span>서래마을</span><b>·</b><span>프라이빗 룸 13</span><b>·</b><span>GRILLED TABLESIDE</span><b>·</b>
-  </div>
-</div>
-
-<!-- STATS ------------------------------------------------------------ -->
-<section class="stats" id="stats" aria-label="우참판 한눈에 보기">
-  <div class="stat" data-reveal><b class="stat__num"><span>1++</span><em>No.9</em></b><span class="stat__label">근내지방도 최고 단계 한우<br><small class="mono">우참판 · 특안심 · 런치정식</small></span></div>
-  <div class="stat" data-reveal><b class="stat__num"><span data-count="2017" data-count-from="1990">2017</span><em>–19</em></b><span class="stat__label">미쉐린 가이드 서울<br><small class="mono">3년 연속 선정</small></span></div>
-  <div class="stat" data-reveal><b class="stat__num"><span data-count="4.7" data-decimals="1">4.7</span><em>/5</em></b><span class="stat__label">캐치테이블 평점 · 맛 4.8<br><small class="mono">리뷰 1,107 · 2026.11 기준</small></span></div>
-  <div class="stat" data-reveal><b class="stat__num"><span data-count="13">13</span><em>rooms</em></b><span class="stat__label">4인부터 16인까지<br><small class="mono">프라이빗 룸 · 룸 차지 없음</small></span></div>
-</section>
-
-<!-- STORY ------------------------------------------------------------ -->
-<section class="story" id="story">
-  <div class="story__seal" aria-hidden="true">
-    <div class="seal seal--xl" data-stamp>牛</div>
-    <p class="story__hanja">牛 · 參 · 判</p>
-  </div>
-  <div class="story__text">
-    <p class="label mono" data-reveal>01 — 이름</p>
-    <h2 class="h2" data-split>소에게 내린 벼슬,<br>우참판</h2>
-    <p class="body" data-reveal>우참판을 牛參判으로 읽어 봅니다. 참판(參判)은 조선 육조의 종2품 벼슬. 그렇게 읽고 나면 한우 한 점에도 품계가 보입니다. 대표 메뉴 우참판과 특안심은 1++ 중에서도 가장 높은 근내지방도, No.9 한우로 준비하고, 갯벌의 바닷물을 끓여 얻은 자염으로 간을 합니다.</p>
-    <p class="body" data-reveal>고기는 테이블에서 숙련된 직원이 알맞게 구워 드립니다. 손님은 대화에만 집중하시면 됩니다.</p>
-    <ul class="story__facts mono" data-reveal>
-      <li><b>2017 · 2018 · 2019</b> 미쉐린 가이드 서울</li>
-      <li><b>서래마을</b> 서울 서초구 서래로 23</li>
+  <section class="about alt" id="about">
+    <div class="wrap about__grid">
+      <div class="about__text" data-reveal>
+        <p class="eyebrow">우참판 牛參判</p>
+        <h2 class="h2">소에게 내린 벼슬</h2>
+        <p>우참판의 낙관에는 牛參判이 새겨져 있습니다. 소(牛)와 조선 육조의 벼슬 참판(參判). 그 이름처럼 한우 한 점에도 품계를 매깁니다.</p>
+        <p>대표 메뉴 우참판과 특안심은 1++ 중에서도 가장 높은 근내지방도 No.9 한우로 준비하고, 갯벌의 바닷물을 끓여 얻는 자염(煮鹽)으로 간을 합니다. 고기는 숙련된 직원이 테이블에서 알맞게 구워 드립니다.</p>
+      </div>
+      <figure class="about__photo" data-reveal>
+        <img src="assets/img/photo/salt-1400.webp" srcset="assets/img/photo/salt-800.webp 800w, assets/img/photo/salt-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" width="1400" height="934" loading="lazy" decoding="async" alt="셰프가 마블링 좋은 한우 위로 소금을 뿌리는 모습">
+        <figcaption>고기 맛의 비밀, 자염</figcaption>
+      </figure>
+    </div>
+    <ul class="wrap pillars">
+      <li data-reveal><span class="pillars__no">01</span><h3>1++ No.9</h3><p>근내지방도 9, 1++ 등급 중에서도 가장 높은 단계의 한우를 씁니다.</p></li>
+      <li data-reveal><span class="pillars__no">02</span><h3>자염 煮鹽</h3><p>갯벌의 바닷물을 오래 끓여 얻는 전통 소금으로 간을 합니다.</p></li>
+      <li data-reveal><span class="pillars__no">03</span><h3>테이블 서비스</h3><p>숙련된 직원이 가장 맛있는 순간에 맞춰 구워 드립니다.</p></li>
     </ul>
-  </div>
-</section>
+  </section>
 
-<!-- 1++ No.9 --------------------------------------------------------- -->
-<section class="grade" id="grade">
-  <div class="grade__head">
-    <p class="label mono" data-reveal>02 — 등급</p>
-    <h2 class="h2" data-split>1++ 중에서도,<br><em>No.9</em></h2>
-    <p class="body" data-reveal>근내지방도는 살코기 사이사이 박힌 지방의 정도를 1부터 9까지 나눈 기준입니다. 1++ 등급은 7부터 9까지, 그 가운데 가장 높은 단계가 No.9입니다.</p>
-    <p class="fineprint mono grade__src" data-reveal>소고기 등급판정 기준(2019.12 개정): 근내지방도 7–9 → 1++ · 6 → 1+ · 4–5 → 1 · 2–3 → 2 · 1 → 3</p>
-  </div>
-  <div class="grade__scale" data-marble-scale>
-    <canvas class="grade__canvas" aria-label="근내지방도 1부터 9까지의 마블링 비교 그래픽" role="img"></canvas>
-    <div class="grade__labels mono" aria-hidden="true">
-      <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span class="is-top">9</span>
+  <section class="marble" aria-label="근내지방도 No.9 마블링">
+    <img src="assets/img/photo/macro-1400.webp" srcset="assets/img/photo/macro-1400.webp 1400w, assets/img/photo/macro-2400.webp 2400w" sizes="100vw" width="2400" height="1350" loading="lazy" decoding="async" alt="1++ No.9 한우 등심의 촘촘한 마블링 접사">
+    <div class="marble__cap wrap" data-reveal>
+      <p class="eyebrow">Marbling No.9</p>
+      <p class="marble__title">1++ 중에서도<br>가장 높은 단계</p>
+      <p class="marble__small">소고기 등급판정 기준에서 근내지방도 7–9는 1++ 등급, 그중 9가 최고 단계입니다.</p>
     </div>
-    <div class="grade__tiers mono" aria-hidden="true"><span style="grid-column:1/2">3</span><span style="grid-column:2/4">2</span><span style="grid-column:4/6">1</span><span style="grid-column:6/7">1+</span><span class="is-top" style="grid-column:7/10">1++</span></div>
-    <p class="grade__hint mono">HOVER / TAP — 단계를 비교해 보세요</p>
-  </div>
-</section>
+  </section>
 
-<!-- THE PLATE -------------------------------------------------------- -->
-<section class="plate" id="plate">
-  <div class="plate__stage" data-plate>
-    <picture>
-      <source srcset="assets/img/plate-ansim-1600.webp 1600w, assets/img/plate-ansim-1000.webp 1000w" sizes="(max-width: 900px) 100vw, 60vw" type="image/webp">
-      <img class="plate__img" src="assets/img/plate-ansim-1600.jpg" width="1600" height="1600" alt="물결무늬 검은 석판 위에 올린 두툼한 특안심 세 점, 별 모양 칼집을 낸 표고버섯, 새송이, 아스파라거스" loading="lazy" decoding="async">
-    </picture>
-    <div class="callouts" aria-hidden="true">
-      <div class="callout" style="--x:59.5%;--y:30.7%"><i></i><b>특안심</b><span class="mono">1++ No.9 · 130g</span></div>
-      <div class="callout callout--l" style="--x:26.5%;--y:63.1%"><i></i><b>표고버섯</b><span class="mono">STAR CUT</span></div>
-      <div class="callout" style="--x:85%;--y:43.5%"><i></i><b>새송이</b><span class="mono">KING OYSTER</span></div>
-      <div class="callout" style="--x:75%;--y:77.6%"><i></i><b>아스파라거스</b><span class="mono">ASPARAGUS</span></div>
-    </div>
-  </div>
-  <div class="plate__text">
-    <p class="label mono" data-reveal>03 — 한 접시</p>
-    <h2 class="h2" data-split>검은 석판 위의<br>한 접시</h2>
-    <p class="body" data-reveal>물결무늬 석판 위에 두툼하게 썬 특안심을 올리고, 별 모양 칼집을 낸 표고버섯과 새송이, 아스파라거스를 곁들입니다. 굽기 전부터 이미 한 상의 풍경이 됩니다.</p>
-    <p class="fineprint mono" data-reveal>* CG로 재현한 플레이팅 이미지입니다. 실제 구성은 메뉴에 따라 달라집니다.</p>
-  </div>
-</section>
-
-<!-- 자염 -------------------------------------------------------------- -->
-<section class="salt" id="salt">
-  <canvas class="salt__canvas" data-salt aria-hidden="true"></canvas>
-  <div class="salt__inner">
-    <p class="label mono" data-reveal>04 — 간</p>
-    <h2 class="salt__title" data-split>고기 맛의 비밀,<br><b>자염</b><small>煮鹽</small></h2>
-    <p class="body" data-reveal>자염은 갯벌의 바닷물을 오랫동안 끓여 얻는 전통 소금입니다. 우참판은 이 소금 한 꼬집으로 한우 본연의 단맛을 끌어올립니다.</p>
-  </div>
-</section>
-
-<!-- GRILL (sticky scroll sequence) ------------------------------------- -->
-<section class="grill" id="grill" data-grill>
-  <div class="grill__sticky">
-    <canvas class="grill__fire" data-fire aria-hidden="true"></canvas>
-    <div class="grill__frames" aria-hidden="true">
-      <img src="assets/img/grill-raw-1600.webp" alt="" width="1600" height="1600" loading="lazy" decoding="async">
-      <img src="assets/img/grill-seared-1600.webp" alt="" width="1600" height="1600" loading="lazy" decoding="async">
-      <img src="assets/img/grill-cubes-1600.webp" alt="" width="1600" height="1600" loading="lazy" decoding="async">
-    </div>
-    <div class="grill__shade"></div>
-    <div class="grill__text">
-      <p class="label mono">05 — 불</p>
-      <h2 class="h2">숙련된 직원이<br>알맞게 구워드립니다</h2>
-      <ol class="grill__steps">
-        <li><span class="mono">01 RAW</span><b>두툼한 그대로</b><p>달군 불판 위에 특안심을 올립니다.</p></li>
-        <li><span class="mono">02 SEARED</span><b>겉은 먹음직스럽게</b><p>그릴 자국이 선명해질 때까지 한 번에.</p></li>
-        <li><span class="mono">03 READY</span><b>한 입 크기로</b><p>속은 촉촉한 로즈빛, 가장 맛있는 순간에 잘라 드립니다.</p></li>
-      </ol>
-    </div>
-    <div class="grill__progress" aria-hidden="true"><i data-grill-bar></i></div>
-  </div>
-</section>
-
-<!-- MENU ------------------------------------------------------------- -->
-<section class="menu" id="menu">
-  <div class="menu__head">
-    <p class="label mono" data-reveal>06 — 메뉴</p>
-    <h2 class="h2" data-split>우참판의 한 상</h2>
-  </div>
-  <div class="menu__cards">
-    <article class="mcard mcard--hero" data-reveal>
-      <div class="mcard__media"><img src="assets/img/plate-deungsim-1000.webp" alt="꽃등심 결이 살아 있는 등심 세 점과 새송이, 표고버섯을 올린 석판" width="1000" height="1000" loading="lazy" decoding="async"></div>
-      <div class="mcard__body">
-        <p class="mcard__tag mono">SIGNATURE SET</p>
-        <h3>우참판 <small>1++ No.9</small></h3>
-        <p>안심 + 등심 150g. 우참판의 이름을 건 대표 구이.</p>
-        <p class="mcard__price"><b>55,000</b><span class="mono">KRW</span></p>
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <header class="sec-head" data-reveal>
+        <p class="eyebrow">Menu</p>
+        <h2 class="h2">대표 메뉴</h2>
+      </header>
+      <div class="dishes">
+        <article class="dish" data-reveal>
+          <div class="dish__img"><img src="assets/img/photo/sirloin-800.webp" srcset="assets/img/photo/sirloin-800.webp 800w, assets/img/photo/sirloin-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" width="1400" height="934" loading="lazy" decoding="async" alt="석판 위의 1++ 한우 등심 세 점"></div>
+          <div class="dish__body">
+            <h3>우참판 <span class="tag">1++ No.9</span></h3>
+            <p>안심과 등심 150g. 우참판의 이름을 건 대표 구이.</p>
+          </div>
+        </article>
+        <article class="dish" data-reveal>
+          <div class="dish__img"><img src="assets/img/photo/tenderloin-800.webp" srcset="assets/img/photo/tenderloin-800.webp 800w, assets/img/photo/tenderloin-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" width="1400" height="934" loading="lazy" decoding="async" alt="두툼하게 썬 특안심 세 점과 로즈메리"></div>
+          <div class="dish__body">
+            <h3>특안심 <span class="tag">1++ No.9</span></h3>
+            <p>130g. 가장 부드러운 부위를 두툼하게.</p>
+          </div>
+        </article>
+        <article class="dish" data-reveal>
+          <div class="dish__img"><img src="assets/img/photo/table-800.webp" srcset="assets/img/photo/table-800.webp 800w, assets/img/photo/table-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" width="1400" height="1050" loading="lazy" decoding="async" alt="반찬과 무쇠 불판, 한우가 차려진 테이블"></div>
+          <div class="dish__body">
+            <h3>런치정식 <span class="tag">평일 점심</span></h3>
+            <p>안심·등심 110g과 된장말이죽 또는 볶음밥. 11:30–14:30.</p>
+          </div>
+        </article>
+        <article class="dish dish--text" data-reveal>
+          <div class="dish__body">
+            <h3>한우국수전골 <span class="tag">1++</span></h3>
+            <p>1++ 한우로 끓이는 한 냄비. 고기와 야채, 죽, 면을 더해 즐길 수 있습니다.</p>
+          </div>
+        </article>
       </div>
-    </article>
-    <article class="mcard mcard--verm" data-reveal>
-      <div class="mcard__media mcard__media--round"><img src="assets/img/plate-ansim-crop.webp" alt="마블링이 고운 특안심 한 점" width="800" height="800" loading="lazy" decoding="async"></div>
-      <div class="mcard__body">
-        <p class="mcard__tag mono">PREMIUM TENDERLOIN</p>
-        <h3>특안심 <small>1++ No.9</small></h3>
-        <p>130g. 가장 부드러운 부위만 두툼하게.</p>
-        <p class="mcard__price"><b>59,000</b><span class="mono">KRW</span></p>
-      </div>
-    </article>
-    <article class="mcard mcard--paper" data-reveal>
-      <div class="mcard__icon"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M18 86 L182 86 L172 160 L28 160 Z"/><path d="M34 108 Q34 144 66 144 Q98 144 98 108 Z"/><path d="M42 100 Q54 92 66 100 Q78 108 90 100"/><path d="M112 104 Q132 90 158 104 Q172 120 154 136 Q128 148 114 134 Q100 118 112 104 Z"/><path d="M122 116 Q134 108 148 120"/><path d="M36 66 L168 44"/><path d="M38 76 L172 56"/></svg></div>
-      <div class="mcard__body">
-        <p class="mcard__tag mono">WEEKDAY LUNCH · 11:30 – 14:30</p>
-        <h3>런치정식 <small>1++ No.9</small></h3>
-        <p>안심·등심 110g + 된장말이죽 또는 볶음밥.</p>
-        <p class="mcard__price"><b>40,000</b><span class="mono">KRW</span></p>
-      </div>
-    </article>
-    <article class="mcard mcard--gold" data-reveal>
-      <div class="mcard__icon"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M34 98 L166 98 L156 160 Q154 172 140 172 L60 172 Q46 172 44 160 Z"/><path d="M22 98 L178 98"/><path d="M34 110 L14 110"/><path d="M166 110 L186 110"/><path d="M52 98 Q62 84 72 98 Q82 112 92 98 Q102 84 112 98 Q122 112 132 98 Q142 84 152 98"/><path class="steam" d="M70 78 Q58 62 72 50 Q84 38 72 24"/><path class="steam" d="M100 78 Q88 62 102 50 Q114 38 102 22"/><path class="steam" d="M130 78 Q118 62 132 50 Q144 38 132 24"/></svg></div>
-      <div class="mcard__body">
-        <p class="mcard__tag mono">HOT POT</p>
-        <h3>한우국수전골 <small>1++</small></h3>
-        <p>1++ 한우로 끓이는 한 냄비. 고기 추가 +6,000 · 야채·죽·면 추가 +3,000</p>
-        <p class="mcard__price"><b>25,000</b><span class="mono">KRW</span></p>
-      </div>
-    </article>
-  </div>
-  <div class="menu__more">
-    <div class="menu__col" data-reveal>
-      <h3 class="mono">구이 · GRILL</h3>
-      <ul>
-        <li><b>특등심</b><span>새우살 · 꽃등심 · 살치</span></li>
-        <li><b>갈비살</b><span>한정 수량</span></li>
-        <li><b>살치살</b><span>한정 수량</span></li>
-        <li><b>우참판 스페셜</b><span>안심 · 새우살 · 살치살 · 갈비살</span></li>
-        <li><b>우참판 삼합</b><span>키조개 관자 · 표고버섯 · 우참판</span></li>
-      </ul>
-    </div>
-    <div class="menu__col" data-reveal>
-      <h3 class="mono">생고기 · RAW</h3>
-      <ul>
-        <li><b>육회</b><span>채끝 · 1+</span></li>
-        <li><b>육사시미</b><span>한정 수량</span></li>
-      </ul>
-      <h3 class="mono">후식 · AFTER</h3>
-      <ul>
-        <li><b>빙수</b><span>식사 후 제공</span></li>
-      </ul>
-    </div>
-    <div class="menu__col" data-reveal>
-      <h3 class="mono">식사 · MEAL</h3>
-      <ul>
-        <li><b>된장말이죽</b><span>구이 뒤의 마무리</span></li>
-        <li><b>깍뚝볶음밥</b><span>1인 기준</span></li>
-        <li><b>된장칼국수</b><span>1인 기준</span></li>
-        <li><b>한우된장찌개</b><span>1++</span></li>
-        <li><b>열무국수</b><span>물 · 비빔</span></li>
-      </ul>
-    </div>
-    <div class="menu__col" data-reveal>
-      <h3 class="mono">와인 · DRINKS</h3>
-      <ul>
-        <li><b>와인 셀렉션</b><span>칠레 · 미국 · 프랑스 · 아르헨티나 · 호주</span></li>
-        <li><b>위스키 · 전통주</b><span>화요 · 일품진로 · 복분자 외</span></li>
-        <li><b>콜키지</b><span>와인 1병 무료 · 2병부터 병당 10,000원</span></li>
-      </ul>
-    </div>
-  </div>
-  <p class="fineprint mono menu__note">대표 메뉴 가격은 캐치테이블 메뉴 정보(2025년 12월 기준)입니다. 그 밖의 메뉴와 가격은 매장 메뉴판을 확인해 주세요.</p>
-</section>
 
-<!-- ROOMS ------------------------------------------------------------ -->
-<section class="rooms" id="rooms" data-rooms>
-  <div class="rooms__sticky">
-    <div class="rooms__inside">
-      <p class="label mono">07 — 공간</p>
-      <h2 class="h2">모임을 위한<br>열세 개의 방</h2>
-      <div class="rooms__grid">
-        <div><span class="mono">4 – 6인</span><p>와인 · 블루 · 옐로우 · 밸리 · 클라우드</p></div>
-        <div><span class="mono">6 – 8인</span><p>그린 · 골드 · 화이트</p></div>
-        <div><span class="mono">8 – 12인</span><p>포레스트 · 파인 · 레드</p></div>
-        <div><span class="mono">12 – 16인</span><p>스카이 · 가든</p></div>
+      <div class="menu-list" data-reveal>
+        <div>
+          <h3>구이</h3>
+          <dl>
+            <div><dt>특등심</dt><dd>새우살 · 꽃등심 · 살치</dd></div>
+            <div><dt>갈비살</dt><dd>한정 수량</dd></div>
+            <div><dt>살치살</dt><dd>한정 수량</dd></div>
+            <div><dt>우참판 스페셜</dt><dd>안심 · 새우살 · 살치살 · 갈비살</dd></div>
+            <div><dt>우참판 삼합</dt><dd>키조개 관자 · 표고버섯 · 우참판</dd></div>
+          </dl>
+        </div>
+        <div>
+          <h3>생고기</h3>
+          <dl>
+            <div><dt>육회</dt><dd>채끝 · 1+</dd></div>
+            <div><dt>육사시미</dt><dd>한정 수량</dd></div>
+          </dl>
+          <h3>후식</h3>
+          <dl>
+            <div><dt>빙수</dt><dd>식사 후 제공</dd></div>
+          </dl>
+        </div>
+        <div>
+          <h3>식사</h3>
+          <dl>
+            <div><dt>된장말이죽</dt><dd>구이 뒤의 마무리</dd></div>
+            <div><dt>깍뚝볶음밥</dt><dd>1인 기준</dd></div>
+            <div><dt>된장칼국수</dt><dd>1인 기준</dd></div>
+            <div><dt>한우된장찌개</dt><dd>1++</dd></div>
+            <div><dt>열무국수</dt><dd>물 · 비빔</dd></div>
+          </dl>
+        </div>
+        <div>
+          <h3>주류</h3>
+          <dl>
+            <div><dt>와인</dt><dd>칠레 · 미국 · 프랑스 · 아르헨티나 · 호주</dd></div>
+            <div><dt>위스키 · 전통주</dt><dd>화요 · 일품진로 · 복분자 외</dd></div>
+            <div><dt>콜키지</dt><dd>와인 1병 콜키지 프리</dd></div>
+          </dl>
+        </div>
       </div>
-      <p class="fineprint mono">룸 차지 없음 · 룸은 변경될 수 있습니다 · 룸에서는 ‘우참판’ 메뉴 주문이 어렵습니다(주말·공휴일 제외)</p>
     </div>
-    <div class="door door--l" aria-hidden="true"><div class="door__paper"><span>프라이빗</span></div></div>
-    <div class="door door--r" aria-hidden="true"><div class="door__paper"><span>룸</span></div></div>
-  </div>
-</section>
+  </section>
 
-<!-- GOOD TO KNOW ----------------------------------------------------- -->
-<section class="info" aria-label="이용 안내">
-  <div class="info__item" data-reveal><span class="mono">VALET</span><b>발렛 주차</b><p>발렛만 가능 · 런치 3,000원 / 디너 4,000원</p></div>
-  <div class="info__item" data-reveal><span class="mono">CORKAGE</span><b>콜키지</b><p>와인 1병 무료, 2병부터 병당 10,000원 · 양주 1병 20,000원</p></div>
-  <div class="info__item" data-reveal><span class="mono">GROUP</span><b>단체 · 대관</b><p>온라인 예약 최대 40명 · 대관 문의 가능</p></div>
-  <div class="info__item" data-reveal><span class="mono">KIDS</span><b>웰컴키즈존</b><p>유아의자 준비 · 대기공간 · 무선인터넷</p></div>
-</section>
+  <section class="gallery" aria-label="사진">
+    <figure class="g g--tall" data-reveal><img src="assets/img/photo/kkot-800.webp" srcset="assets/img/photo/kkot-800.webp 800w, assets/img/photo/kkot-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 33vw" width="1400" height="1260" loading="lazy" decoding="async" alt="꽃등심과 새송이, 아스파라거스를 올린 석판"><figcaption>꽃등심</figcaption></figure>
+    <figure class="g" data-reveal><img src="assets/img/photo/slice-800.webp" srcset="assets/img/photo/slice-800.webp 800w, assets/img/photo/slice-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 33vw" width="1400" height="934" loading="lazy" decoding="async" alt="한우를 두툼하게 손질하는 모습"><figcaption>손질</figcaption></figure>
+    <figure class="g" data-reveal><img src="assets/img/photo/galbi-800.webp" srcset="assets/img/photo/galbi-800.webp 800w, assets/img/photo/galbi-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 33vw" width="1400" height="934" loading="lazy" decoding="async" alt="석판 위의 갈비살"><figcaption>갈비살</figcaption></figure>
+    <figure class="g" data-reveal><img src="assets/img/photo/yukhoe-800.webp" srcset="assets/img/photo/yukhoe-800.webp 800w, assets/img/photo/yukhoe-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 33vw" width="1400" height="934" loading="lazy" decoding="async" alt="무채 위에 올린 육회"><figcaption>육회</figcaption></figure>
+    <figure class="g" data-reveal><img src="assets/img/photo/medallions-800.webp" srcset="assets/img/photo/medallions-800.webp 800w, assets/img/photo/medallions-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 33vw" width="1400" height="934" loading="lazy" decoding="async" alt="바질과 함께 놓인 특안심"><figcaption>특안심</figcaption></figure>
+  </section>
 
-<!-- VISIT ------------------------------------------------------------ -->
-<section class="visit" id="visit">
-  <div class="visit__map" data-map aria-hidden="true">
-    <svg viewBox="0 0 800 640" preserveAspectRatio="xMidYMid slice"><g class="map__roads"></g><path class="map__route" d="M-20 600 L180 520 L330 460 L420 400 L470 330"/><g class="map__label" transform="translate(452 250)"><path d="M14 58 L-18 0 L-230 0"/><text class="map__t1" x="-26" y="-14" text-anchor="end">우참판 서래본점</text><text class="map__t2" x="-26" y="22" text-anchor="end">SEORAE-RO 23 · 3F</text></g><g class="map__pin" transform="translate(470 330)"><circle class="map__ring" r="18"/><circle class="map__ring map__ring--2" r="18"/><path d="M0 0 C-7 -13 -19 -20 -19 -35 A19 19 0 1 1 19 -35 C19 -20 7 -13 0 0 Z"/><circle cy="-35" r="7" fill="#f2e9dd"/></g></svg>
-  </div>
-  <div class="visit__info">
-    <p class="label mono" data-reveal>08 — 오시는 길</p>
-    <h2 class="h2" data-split>서래마을,<br>서래로 23</h2>
-    <dl class="visit__dl">
-      <div data-reveal><dt class="mono">ADDRESS</dt><dd>서울 서초구 서래로 23 이오빌딩 3층</dd></div>
-      <div data-reveal><dt class="mono">SUBWAY</dt><dd>9호선 신반포역 727m<br>3·7·9호선 고속터미널역 929m</dd></div>
-      <div data-reveal><dt class="mono">HOURS</dt><dd>
+  <section class="space alt" id="space">
+    <div class="wrap">
+      <header class="sec-head" data-reveal>
+        <p class="eyebrow">Private Rooms</p>
+        <h2 class="h2">모임을 위한 열세 개의 방</h2>
+        <p class="sec-head__lede">4인부터 16인까지, 룸 차지 없이 이용하실 수 있습니다. 서래마을을 내려다보는 창가의 방과 조용한 방이 있습니다.</p>
+      </header>
+      <div class="rooms-photos">
+        <figure class="rp rp--wide" data-reveal><img src="assets/img/photo/room-a-1400.webp" srcset="assets/img/photo/room-a-800.webp 800w, assets/img/photo/room-a-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 66vw" width="1400" height="1050" loading="lazy" decoding="async" alt="창밖으로 서래마을이 보이는 단체 룸"></figure>
+        <figure class="rp" data-reveal><img src="assets/img/photo/room-b-800.webp" srcset="assets/img/photo/room-b-800.webp 800w, assets/img/photo/room-b-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 33vw" width="1400" height="1162" loading="lazy" decoding="async" alt="통창이 있는 프라이빗 룸"></figure>
+        <figure class="rp" data-reveal><img src="assets/img/photo/entrance-800.webp" srcset="assets/img/photo/entrance-800.webp 800w, assets/img/photo/entrance-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 33vw" width="1400" height="906" loading="lazy" decoding="async" alt="와인 셀러가 있는 입구 복도"></figure>
+      </div>
+      <dl class="rooms" data-reveal>
+        <div><dt>4–6인</dt><dd>와인 · 블루 · 옐로우 · 밸리 · 클라우드</dd></div>
+        <div><dt>6–8인</dt><dd>그린 · 골드 · 화이트</dd></div>
+        <div><dt>8–12인</dt><dd>포레스트 · 파인 · 레드</dd></div>
+        <div><dt>12–16인</dt><dd>스카이 · 가든</dd></div>
+      </dl>
+      <p class="note">룸은 변경될 수 있습니다. 룸에서는 ‘우참판’ 메뉴 주문이 어렵습니다(주말·공휴일 제외).</p>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap visit__grid">
+      <div data-reveal>
+        <p class="eyebrow">Visit</p>
+        <h2 class="h2">오시는 길</h2>
+        <dl class="info">
+          <div><dt>주소</dt><dd>서울 서초구 서래로 23 이오빌딩 3층</dd></div>
+          <div><dt>지하철</dt><dd>9호선 신반포역 727m<br>3·7·9호선 고속터미널역 929m</dd></div>
+          <div><dt>주차</dt><dd>발렛 주차 이용</dd></div>
+          <div><dt>전화</dt><dd><a href="tel:01072005940">010-7200-5940</a></dd></div>
+        </dl>
+        <div class="visit__actions">
+          <a class="btn" href="https://app.catchtable.co.kr/ct/shop/woochampan" target="_blank" rel="noopener">캐치테이블 예약</a>
+          <a class="btn btn--ghost" href="https://map.naver.com/p/search/%EC%9A%B0%EC%B0%B8%ED%8C%90" target="_blank" rel="noopener">네이버 지도</a>
+        </div>
+      </div>
+      <div data-reveal>
+        <h3 class="h3">영업시간 <span class="status" data-status>연중무휴</span></h3>
         <table class="hours">
-          <tr data-days="1,2,3,4,5"><th>평일</th><td>11:30 – 22:00</td><td class="mono">브레이크 14:30–17:00 · 라스트오더 21:00</td></tr>
-          <tr data-days="0,6"><th>주말</th><td>11:30 – 21:30</td><td class="mono">브레이크 15:00–17:00 · 라스트오더 20:30</td></tr>
+          <tbody>
+            <tr data-days="1,2,3,4,5"><th scope="row">평일</th><td>11:30 – 22:00</td><td>브레이크 14:30–17:00<br>라스트오더 21:00</td></tr>
+            <tr data-days="0,6"><th scope="row">주말</th><td>11:30 – 21:30</td><td>브레이크 15:00–17:00<br>라스트오더 20:30</td></tr>
+          </tbody>
         </table>
-        <span class="open-now" data-open-status-long>연중무휴</span>
-      </dd></div>
-      <div data-reveal><dt class="mono">CALL</dt><dd><a href="tel:01072005940">010-7200-5940</a></dd></div>
-    </dl>
-    <div class="visit__ctas" data-reveal>
-      <a class="btn btn--seal" href="https://app.catchtable.co.kr/ct/shop/woochampan" target="_blank" rel="noopener">캐치테이블 예약</a>
-      <a class="btn btn--ghost" href="https://map.naver.com/p/search/%EC%9A%B0%EC%B0%B8%ED%8C%90" target="_blank" rel="noopener">네이버 지도</a>
-      <a class="btn btn--ghost" href="tel:01072005940">전화 걸기</a>
+        <h3 class="h3">이용 안내</h3>
+        <ul class="notes">
+          <li>당일 예약은 매장으로 문의해 주세요.</li>
+          <li>캐치테이블은 구이(고기)류 예약만 가능합니다. 전골류는 네이버 예약을 이용해 주세요.</li>
+          <li>와인은 1병까지 콜키지 프리입니다. 2병째부터와 양주는 콜키지가 있습니다.</li>
+          <li>단체·대관 가능, 온라인 예약 최대 40명 · 유아의자 준비</li>
+        </ul>
+      </div>
     </div>
-    <ul class="fineprint mono visit__notes" data-reveal>
-      <li>당일 예약은 매장으로 문의해 주세요.</li>
-      <li>캐치테이블은 구이(고기)류 예약만 가능합니다. 전골류 예약은 네이버 예약을 이용해 주세요.</li>
-    </ul>
-  </div>
-</section>
-
-<!-- SHOWREEL --------------------------------------------------------- -->
-<section class="reel" id="reel">
-  <div class="reel__head">
-    <p class="label mono" data-reveal>09 — 쇼릴</p>
-    <h2 class="h2" data-split>36초에 담은 우참판</h2>
-    <p class="body" data-reveal>모든 장면은 코드로 만들었습니다. 하이트필드 레이마칭 CG로 재현한 플레이팅, GLSL 마블링과 불꽃, 캔버스 키네틱 타이포그래피, 가야금처럼 튕기는 Karplus–Strong 사운드까지.</p>
-  </div>
-  <div class="reel__player" data-reveal>
-    <button class="reel__poster" data-play-reel="0" aria-label="PLAY 쇼릴 재생 (소리 있음)">
-      <img src="assets/media/poster.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
-      <span class="reel__play"><span class="play" aria-hidden="true"></span><b>PLAY</b><small class="mono">00:36 · 1080p60 · STEREO</small></span>
-    </button>
-  </div>
-  <ol class="chapters" data-chapters></ol>
-  <p class="reel__live mono"><a href="reel/">실시간 렌더 엔진으로 보기 →</a> <span>같은 장면을 브라우저에서 실시간으로 그립니다</span></p>
-</section>
+  </section>
 
 </main>
 
-<footer class="foot">
-  <div class="foot__word" aria-hidden="true"><span class="seal seal--lg">牛</span><span>우참판</span></div>
-  <div class="foot__cols">
-    <p><b>우참판 서래본점</b><br>서울 서초구 서래로 23 이오빌딩 3층<br><a href="tel:01072005940">010-7200-5940</a></p>
-    <p class="mono">평일 11:30 – 22:00<br>주말 11:30 – 21:30<br>연중무휴</p>
-    <p class="mono">MICHELIN GUIDE SEOUL<br>2017 · 2018 · 2019</p>
+<footer class="ft">
+  <div class="wrap ft__grid">
+    <img class="ft__logo" src="assets/img/logo.png" alt="우참판" width="559" height="520" loading="lazy">
+    <div class="ft__info">
+      <p><strong>우참판 서래본점</strong></p>
+      <p>서울 서초구 서래로 23 이오빌딩 3층</p>
+      <p><a href="tel:01072005940">010-7200-5940</a></p>
+    </div>
+    <div class="ft__info">
+      <p>평일 11:30 – 22:00</p>
+      <p>주말 11:30 – 21:30</p>
+      <p>연중무휴</p>
+    </div>
+    <div class="ft__info">
+      <p>미쉐린 가이드 서울</p>
+      <p>2017 · 2018 · 2019</p>
+    </div>
   </div>
-  <p class="foot__legal mono">© 우참판 WOOCHAMPAN · 이미지는 CG로 재현한 연출 컷입니다</p>
+  <p class="wrap ft__copy">© 우참판</p>
 </footer>
 
-<!-- video modal -->
-<dialog class="modal" data-modal aria-label="우참판 쇼릴">
-  <div class="modal__inner">
-    <video data-modal-video controls playsinline preload="none">
-      <source src="assets/media/showreel.mp4" type="video/mp4">
-    </video>
-    <button class="modal__close" data-close aria-label="닫기">×</button>
-  </div>
-</dialog>
-
-<script type="module" src="assets/js/site.js"></script>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
