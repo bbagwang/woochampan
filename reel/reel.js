@@ -63,8 +63,12 @@ if (!bg || !post) {
   out.insertAdjacentHTML('afterend', '<p style="padding:24px;font:15px sans-serif">이 브라우저는 WebGL2를 지원하지 않습니다. <a href="../assets/media/showreel.mp4" style="color:#e3c88f">영상으로 보기 →</a></p>');
   throw new Error('WebGL2 unavailable');
 }
-const PM = bg.program(MARBLE_FS), PF = bg.program(FIRE_FS);
-const PP = post.program(POST_FS); const tex = post.texture();
+let PM, PF, PP;
+try { PM = bg.program(MARBLE_FS); PF = bg.program(FIRE_FS); } catch (e) {
+  out.insertAdjacentHTML('afterend', '<p style="padding:24px;font:15px sans-serif">셰이더를 컴파일하지 못했습니다. <a href="../assets/media/showreel.mp4" style="color:#e3c88f">영상으로 보기 →</a></p>');
+  throw e;
+}
+PP = post.program(POST_FS); const tex = post.texture();
 const mask = mk(W, H); const mx = mask.getContext('2d');
 
 function bgClear() { const gl = bg.gl; gl.viewport(0, 0, W, H); gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT); }

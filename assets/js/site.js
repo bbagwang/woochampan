@@ -7,6 +7,7 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const lerp = (a, b, t) => a + (b - a) * t;
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.documentElement.classList.add('ready');   // hidden/animated states apply only once this module runs
 const CHAPTERS = [
   { t: 0, n: 'IGNITION', ko: '점화' }, { t: 4, n: 'THE SEAL', ko: '낙관' }, { t: 8, n: 'NO.9', ko: '근내지방도' },
   { t: 12, n: 'THE PLATE', ko: '플레이팅' }, { t: 16, n: 'THE GRILL', ko: '굽기' }, { t: 20, n: 'THE TABLE', ko: '한 상' },
@@ -138,14 +139,14 @@ if (hv) {
 // pause every ambient motion (WCAG 2.2.2)
 const motionBtn = $('[data-motion-toggle]');
 if (motionBtn) {
+  // fixed accessible name ("모션 정지"); aria-pressed carries the state
   const setMotion = off => {
     document.documentElement.classList.toggle('no-motion', off);
     motionBtn.setAttribute('aria-pressed', off);
-    motionBtn.querySelector('span').textContent = off ? '모션 재생' : '모션 정지';
-    if (hv && !REDUCED) { off ? hv.pause() : hv.play().catch(() => {}); }
+    if (hv) { off ? hv.pause() : hv.play().catch(() => {}); }
   };
   motionBtn.addEventListener('click', () => setMotion(motionBtn.getAttribute('aria-pressed') !== 'true'));
-  if (REDUCED) setMotion(true);
+  if (REDUCED) { motionBtn.hidden = true; document.documentElement.classList.add('no-motion'); }
 }
 
 // ------------------------------------------------------------ modal player
@@ -159,10 +160,12 @@ function openReel(t = 0) {
   const first = pendingSeek === null;
   pendingSeek = t;
   if (first) {
-    mv.addEventListener('loadedmetadata', () => { const at = pendingSeek; pendingSeek = null; go(at); }, { once: true });
+    mv.addEventListener('loadedmetadata', () => { const at = pendingSeek; pendingSeek = null; if (at !== null) go(at); }, { once: true });
     if (mv.networkState !== HTMLMediaElement.NETWORK_LOADING) { mv.preload = 'auto'; mv.load(); }
   }
 }
+// a failed load must not block the next attempt
+mv.addEventListener('error', () => { pendingSeek = null; }, true);
 document.addEventListener('click', e => { const b = e.target.closest('[data-play-reel]'); if (b) openReel(+b.dataset.playReel || 0); });
 $('[data-close]').addEventListener('click', () => modal.close());
 modal.addEventListener('click', e => { if (e.target === modal || e.target.classList.contains('modal__inner')) modal.close(); });
@@ -211,7 +214,10 @@ if (scale) {
   const cvs = $('canvas', scale);
   const g = makeGL(cvs, { alpha: true, premultipliedAlpha: true });
   const prog = g && safeProgram(g, MARBLE_FS);
-  const fallback = () => { cvs.style.background = 'repeating-linear-gradient(90deg,#9b1b20 0 10.1%,transparent 10.1% 11.25%)'; };
+  const fallback = () => {
+    cvs.style.background = 'repeating-linear-gradient(90deg,#9b1b20 0 10.1%,transparent 10.1% 11.25%)';
+    $('.grade__labels', scale).style.gridTemplateColumns = ''; $('.grade__tiers', scale).style.gridTemplateColumns = '';
+  };
   if (!prog) fallback();
   else {
     let lost = false;
